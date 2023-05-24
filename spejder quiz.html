@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="dk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test din Viden</title>
+    <style>
+
+        .container {
+            border: 3px ;
+            border-radius: 10px;
+            width: 60%;
+            padding: 20px;
+            display: none;
+            background-color: #0953149b;
+            font-family: sans-serif;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        button {
+            margin-top: 10px;
+            color: #ffffffd1;
+            background-color:#ff5252d1;
+            border: none;
+            font-size: medium;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    Test din spejder viden!
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="next" onclick="next(1)">Tag Testen</button>
+</div>
+<div class="container">
+    Hvem startede spejderne? <br>
+
+    <input type="radio" name="question1">walt disney<br>
+    <input type="radio" name="question1">Jens Friis<br>
+    <input type="radio" name="question1">Radyard Kipling<br>
+    <input type="radio" name="question1" id="correct1">Robert Baden-Powell<br>
+    <button class="next" onclick="next(2)">næste</button>
+</div>
+
+<div class="container">
+    Hvilket år blev sct. michael gruppen stiftet?<br>
+    <input type="radio" name="question2" >1920<br>
+    <input type="radio" name="question2">1945<br>
+    <input type="radio" name="question2">1947<br>
+    <input type="radio" name="question2" id="correct2">1930<br>
+    <button class="next" onclick="next(3)">næste</button>
+</div>
+
+<div class="container">
+    Hvordan starter spejderloven?<br>
+    <input type="radio" name="question3" >Jeg Lover at gøre hvad jeg kan<br>
+    <input type="radio" name="question3" id="correct3"> Jeg lover at gøre mit bedste<br>
+    <input type="radio" name="question3">Jeg lover at prøve på<br>
+    <input type="radio" name="question3">Jeg håber at gøre det jeg kan<br>
+    <button class="next" onclick="next(4)">næste</button>
+</div>
+
+<div class="container">
+    en gang spejder altid?<br>
+    <input type="radio" name="question4"id="correct4">Spejder<br>
+    <input type="radio" name="question4">Pyroman<br>
+    <input type="radio" name="question4">Loduman<br>
+    <button class="next" onclick="next(5)">glad</button>
+</div>
+<div class="container">
+    Hvem skrev junglebogen?<br>
+    <input type="radio" name="question5"id="correct5" >Radyard Kipling<br>
+    <input type="radio" name="question5">Walt Disney<br>
+    <input type="radio" name="question5">HC Andersen<br>
+    <input type="radio" name="question5">Charles Dickens<br>
+    <button class="next" onclick="next(6)">næste</button>
+</div>
+
+<div class="container">
+    Hvad elsker spejdere høst?<br>
+    <input type="radio" name="question6" >Gud<br>
+    <input type="radio" name="question6">Naturen<br>
+    <input type="radio" name="question6">sammenhold<br>
+    <input type="radio" name="question6" id="correct6"> Ild!!!!!!<br>
+    <button onclick="result()">svar</button>
+</div>
+
+<script>
+
+    document.getElementsByClassName('container')[0].style.display = "block";
+
+
+    function next(id) {
+        document.getElementsByClassName('container')[id-1].style.display = "none";
+        document.getElementsByClassName('container')[id].style.display = "block";
+    }
+
+
+    function result() {
+        var score = 0;
+        if (document.getElementById('correct1').checked) {
+            score++;
+        }
+        if (document.getElementById('correct2').checked) {
+            score++;
+        }
+        if (document.getElementById('correct3').checked) {
+            score++;
+        }
+
+    if (document.getElementById('correct4').checked) {
+        score++;
+    }
+
+        if (document.getElementById('correct5').checked) {
+            score++;
+        }
+
+        if (document.getElementById('correct6').checked) {
+            score++;
+        }
+        alert("du fik: "+ score + "/6" );
+        alert("1:Spejderne blev skabt af Robert Baden-Powell\n" +
+            "2:sct. michael gruppen blev stiftet i år 1930\n" +
+            "3:Spejderloven starter med: Jeg lover at gøre hvad jeg kan\n"+
+            "4:En gang Spejder altid spejder, Læg så den pind tilbage i bålet\n" +
+            "5:Radyard Kipling skrev Junglebogen.\n" +
+            "6:EN SPEJDER ELSKER ILD!!.\n" +
+            "Husk det er sjovt at være spejder" )
+    }
+
+</script>
+</body>
+</html>
+
+
+
+</body>
+</html>
